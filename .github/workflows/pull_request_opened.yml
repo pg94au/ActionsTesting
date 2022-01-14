@@ -27,6 +27,9 @@ jobs:
       run: |
         mkdir coverage
         echo `date` >coverage/index.html
+        echo "Need to create report for pull request"
+        pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+        echo "Pull request number is $pull_number"
 
     - name: Archive report
       uses: actions/upload-artifact@v2
