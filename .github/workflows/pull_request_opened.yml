@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Pull Request Opened
 
 on:
   pull_request:
